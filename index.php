@@ -25,6 +25,8 @@
     <div class="form-horizontal">
       <iframe id="upload" frameborder="0" style="width: 40%;overflow-x:hidden;" scrolling="no" height="200px;" src="./hosxpupload.php"></iframe>
 		</div>
+    <h2>CopyRight © Nadun Hospital</h2>
+    <h2>Pitchapong Polyiam</h2>
   </center>
  </body>
 </html>
