@@ -31,7 +31,8 @@
   <center>
   <form enctype="multipart/form-data" novalidate="novalidate" action="upload.php" method="POST">
         <input type="file" class="jfilestyle" data-theme="asphalt" name="uploaded_file" data-text="เลือกไฟล์"></input><br>
-        <input type="submit" class="button" value="อัพโหลดไฟล์"></input><br><br>
+        <input type="submit" class="button" value="อัพโหลดไฟล์"></input>
+	 </form><br><br>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./src/jquery-filestyle.min.js"></script>
     <script type="text/javascript">
