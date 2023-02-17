@@ -1,3 +1,10 @@
+<?php
+$conn = new mysqli("localhost", "username", "password" , "database");
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,6 +36,10 @@
       $path = "uploads/";
       $path = $path . basename( $_FILES['uploaded_file']['name']);
       if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $path)) {
+	$name = $_FILES['uploaded_file']['name'];
+        $size = $_FILES['uploaded_file']['size'];
+        $sqlinsert = "INSERT into updatehosxp (Name , Size , Date) value ('$name' , '$size' , NOW())";
+        $res = $conn->query($sqlinsert);
         echo "The file ".  basename( $_FILES['uploaded_file']['name']).
         " has been uploaded";
       } else{
