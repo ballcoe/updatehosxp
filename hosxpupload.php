@@ -1,3 +1,10 @@
+<?php
+$conn = new mysqli("localhost", "username", "password" , "database");
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head>
