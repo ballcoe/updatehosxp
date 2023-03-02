@@ -38,6 +38,12 @@ include "../config.php";
                                 margin-bottom:10px;
                                 text-align: center;
                         }
+                        a:link {
+                                color: blue;
+                        }
+                        a:visited {
+                                color: blue;
+                        }
                 </style>
         </head>
         <body>
