@@ -47,6 +47,7 @@ include "../config.php";
         <?php
                 $sql = "SELECT * FROM updatehosxp order by Name;";
                 $result = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($result) > 0) {
         ?>
                 <table>
                         <tr>
@@ -56,7 +57,6 @@ include "../config.php";
                                 <th>Action</th>
                         </tr>
         <?php
-        if (mysqli_num_rows($result) > 0) {
                 while($data = mysqli_fetch_object($result)) {
                 $sizemb = number_format($data->Size/1048576, 2, '.', '');
         ?>
@@ -69,14 +69,14 @@ include "../config.php";
                         </tr>
         <?php
                 }
+        ?></table><?php
         } else {
-                echo "0 Result";
+                echo '<center><font color="red">Do not have any File!!!</font></center>';
         }
         ?>
         <?php
                 $conn->close();
         ?>
-                </table>
         </div>
         </body>
         <script language="JavaScript">
